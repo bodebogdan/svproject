@@ -46,7 +46,7 @@
         <div class="product-card padly">
           <div class="product-info ell glassy-bg padmy padlx">
             <div class="title">
-              <h6><%= image_tag product.image.url(:thumb) %> <span>(<%= product.name %>)</span></h6>
+              <h6><%= link_to (image_tag product.image.url(:thumb)), product %> <span>(<%= product.name %>)</span></h6>
             </div>
             <p class="left price label product-label radius">$ <%= product.price %></p>
           </div>
