@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
+gem 'letter_opener'
 gem 'foundation-rails'
 gem 'redis-rails'
 gem 'hiredis'
@@ -39,6 +40,7 @@ gem 'hiredis'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "resque", "~> 2.0.0.pre.1", github: "resque/resque"
 		
   gem 'foundation-rails'
    # Access an IRB console on exception pages or by using <%= console %> in views

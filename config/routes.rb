@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
   resources :products
   root 'products#index'
-  resource :cart, only: [:show] do
-  put 'add/:movie_id', to: 'carts#add', as: :add_to
-  put 'remove/:movie_id', to: 'carts#remove', as: :remove_from
+  resource :cart, only: [:show] do    
+  post :test, to:'mail#test'
+  put 'add/:product_id', to: 'carts#add', as: :add_to
+  put 'remove/:product_id', to: 'carts#remove', as: :remove_from
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

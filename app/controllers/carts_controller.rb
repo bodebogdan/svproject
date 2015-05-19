@@ -5,16 +5,19 @@ class CartsController < ApplicationController
     cart_ids = $redis.smembers current_user_cart
     puts '--------Cart_IDS-------------'
     puts cart_ids 
-    @cart_products = Product.find(cart_ids)
+    @cart_products = Product.where(id: cart_ids)
   end
  
   def add
-    $redis.sadd current_user_cart, params[:product_name]
+    puts '-----------'
+    puts params[:product_id]
+    puts '==========='
+    $redis.sadd current_user_cart, params[:product_id]
     render json: current_user.cart_count, status: 200
   end
  
   def remove
-    $redis.srem current_user_cart, params[:product_name]
+    $redis.srem current_user_cart, params[:product_id]
     render json: current_user.cart_count, status: 200
   end
  
