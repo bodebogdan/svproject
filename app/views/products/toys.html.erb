@@ -10,6 +10,7 @@
 <div class="column">
   <ul class="products-grid no-bullet row small-block-grid-4">
     <% @products.each do |product| %>
+      <%if product.type == "Toy" %>
       <li>
         <div class="product-card padly">
           <div class="product-info ell glassy-bg padmy padlx">
@@ -20,6 +21,7 @@
           </div>
         </div>
       </li>
+      <%end%>
     <% end %>
   </ul>
 </div>

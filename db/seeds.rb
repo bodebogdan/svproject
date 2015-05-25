@@ -8,4 +8,4 @@
 
 adminrole = Role.create(name: "Admin")
 Role.create(name: "Regular")
-#User.create(name: vasile, password: asiga, role: adminrole)
+User.create(email: "admin3@hand.com", password: "admin123",password_confirmation: "admin123" ,role: adminrole)

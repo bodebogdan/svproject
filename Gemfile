@@ -26,6 +26,7 @@ gem 'devise'
 gem 'letter_opener'
 gem 'foundation-rails'
 gem 'redis-rails'
+gem 'cancan'
 gem 'hiredis'
 
 # Use ActiveModel has_secure_password
@@ -41,7 +42,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem "resque", "~> 2.0.0.pre.1", github: "resque/resque"
-		
+	gem 'cancan'
   gem 'foundation-rails'
    # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

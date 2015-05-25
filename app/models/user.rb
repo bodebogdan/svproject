@@ -9,8 +9,18 @@ class User < ActiveRecord::Base
   end
 
   before_save :set_role
+  # def admin?
+  # 	if role == "Admin"
+  # 		return true
+  # 	else
+  # 		return false
+  # 	end
+  # end
 
   def set_role
   	role=Role.find_by(name:"Regular") unless role.nil?
+  end
+  def add_role(role_assigned )
+  	role=role_assigned
   end
 end
