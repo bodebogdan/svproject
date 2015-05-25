@@ -26,7 +26,7 @@ gem 'devise'
 gem 'letter_opener'
 gem 'foundation-rails'
 gem 'redis-rails'
-gem 'cancan'
+gem 'cancancan'
 gem 'hiredis'
 
 # Use ActiveModel has_secure_password
