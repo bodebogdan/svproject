@@ -7,16 +7,18 @@
 // Body background
 body {
   background-image: url(http://designm.ag/images/1009/tempshop/4-full.jpg);
-  background-position: center;
+  background-position: relative; 
+  background-color: #545454;
+  background-repeat: repeat-x;
   color: #fff;
 }
 // Logo
 .title-area{
-  a { padding:0 !important }
+  a { padding:5 !important }
   i {
     font-size: 30px;
     position: relative;
-    top: 2px;
+    top: 50px;
   }
 }
 // Topbar items

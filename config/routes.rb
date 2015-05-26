@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :products
   root 'products#index'
   resource :cart, only: [:show] do    
-  post :test, to:'mail#test'
+  post :test, to:'mail#test'   
+  post :register, to:'mail#register'
   put 'add/:product_id', to: 'carts#add', as: :add_to
   put 'remove/:product_id', to: 'carts#remove', as: :remove_from
   end
