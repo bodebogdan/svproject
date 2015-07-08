@@ -44,7 +44,6 @@ group :development, :test do
   gem 'cancan'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  gem 'foundation-rails'
    # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   gem "paperclip", "~> 4.2"
